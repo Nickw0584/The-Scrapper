@@ -37,7 +37,7 @@ var express = require("express");
 
 	// Hook mongoose configuration to the db variable
 	const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-	mongoose.connect(MONGODB_URI,);
+	mongoose.connect(MONGODB_URI);
 	
 
 	//ROUTES
