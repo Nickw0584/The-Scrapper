@@ -2,7 +2,12 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
+var bodyParser =require("express");
 
+
+//requiring note models
+var Note = require(".models/Note.js");
+var Article = require("./models/Article.js")
 // Scraping tools
 
 var axios = require("axios");
@@ -27,7 +32,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-app.engine("handlebars", exphbs({ defaultLayout: "main"}));
+app.engine("handlebars", exphbs({ defaultLayout: "main",
+partialsDir:path.join(_dirname, "views/layouts/partials")
+}));
 app.set("view engine", "handlebars");
 app.set("index", __dirname + "/views")
 
