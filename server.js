@@ -32,6 +32,7 @@ var express = require("express");
 
 	app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 	app.set("view engine", "handlebars");
+	app.set('index', '/views');
 	
 
 	// Hook mongoose configuration to the db variable
