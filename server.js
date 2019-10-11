@@ -2,7 +2,7 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
-var bodyParser =require("express");
+
 
 
 //requiring note models
